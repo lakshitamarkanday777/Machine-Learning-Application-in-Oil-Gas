@@ -1,57 +1,57 @@
-# Machine-Learning-Application-in-Oil-Gas
+# 🛢️ Machine Learning Application in Oil & Gas
 
-This project applies machine learning to analyze and predict reservoir characteristics using a combination of geological, geophysical, and production data. The aim is to assist decision-making in the upstream oil and gas sector by building accurate regression models to estimate reservoir properties such as porosity and permeability.
+This project applies machine learning to classify rock facies based on well log data. Correct facies prediction is critical for understanding subsurface geology and optimizing hydrocarbon recovery in the oil and gas industry.
 
-## 📂 Project Overview
+## 📌 Project Overview
 
-- **Domain:** Oil & Gas (Reservoir Characterization)
-- **Goal:** Predict porosity using well log features
-- **Approach:** Supervised learning (Regression)
-- **Dataset:** Synthetic reservoir dataset with well log measurements
-- **Modeling Techniques:** 
-  - Linear Regression
-  - Random Forest Regressor
-  - XGBoost Regressor
+- **Course**: Machine Learning Analyst, NorQuest College  
+- **Project Focus**: Reservoir facies classification  
+- **Objective**: Predict rock facies using supervised learning  
+- **Dataset**: Synthetic well log dataset  
+- **Final Model**: Random Forest Classifier
 
-## 🔍 Key Features
+## 🧪 Workflow Summary
 
-- Exploratory Data Analysis (EDA) to understand feature relationships and detect outliers
-- Feature engineering including correlation filtering and one-hot encoding
-- Data normalization using MinMaxScaler
-- Train-test split for performance evaluation
-- Multiple regression models with performance comparison
-- Model evaluation metrics: MAE, MSE, RMSE, R²
+- Data cleaning and preprocessing  
+- Label encoding of categorical variables  
+- Standardization using `StandardScaler`  
+- Addressing class imbalance with **SMOTE**  
+- Model training and validation  
+- Test set prediction using data from a separate well (`SHANKLE`)
 
-## 🧪 Machine Learning Models
+## 🔍 Features Used
 
-| Model               | MAE     | RMSE    | R² Score |
-|--------------------|---------|---------|----------|
-| Linear Regression  | ~0.050  | ~0.066  | ~0.84    |
-| Random Forest      | ~0.037  | ~0.050  | ~0.91    |
-| XGBoost            | ~0.035  | ~0.049  | ~0.92    |
+| Feature       | Description                                  |
+|---------------|----------------------------------------------|
+| `GR`          | Gamma Ray log (indicates lithology)          |
+| `ILD_log10`   | Log-transformed resistivity                  |
+| `DeltaPHI`    | Difference in porosity readings              |
+| `PHIND`       | Neutron porosity                             |
+| `PE`          | Photoelectric effect                         |
+| `NM_M`        | Normalized matrix indicator                  |
+| `RELPOS`      | Relative stratigraphic position              |
+| `Formation`   | Encoded geological formation name            |
+| `Well Name`   | Encoded well name                            |
 
-> 📌 **XGBoost Regressor** delivered the best performance and was chosen as the final model.
+> All features were scaled and encoded appropriately before training.
+
+## 🛠️ Machine Learning Models
+
+| Model                        | Notes                              |
+|-----------------------------|------------------------------------|
+| ✅ Random Forest Classifier | Best performance (used in final)   |
+| Gradient Boosting Classifier| Tried, but performed worse         |
+| XGBoost                     | Not used in this project           |
+
+## ✔️ Final Model: Random Forest Classifier
+
+- Provided the best classification report across multiple facies
+- Handled imbalanced data well with **SMOTE**
+- Verified on both validation and separate test well data
 
 ## 📈 Visualizations
 
-- Heatmaps for correlation analysis
-- Feature importance plots for model interpretability
-- Actual vs. Predicted scatter plots
+- Confusion matrix for performance visualization  
+- Facies log plot per depth for visual interpretation
 
-## 🛠️ Technologies Used
 
-- Python 3
-- pandas, NumPy
-- scikit-learn
-- XGBoost
-- Matplotlib, Seaborn
-- Jupyter Notebook
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure the following libraries are installed:
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost
