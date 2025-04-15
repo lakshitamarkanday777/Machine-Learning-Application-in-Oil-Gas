@@ -41,7 +41,6 @@ This project applies machine learning to classify rock facies based on well log 
 |-----------------------------|------------------------------------|
 | ✅ Random Forest Classifier | Best performance (used in final)   |
 | Gradient Boosting Classifier| Tried, but performed worse         |
-| XGBoost                     | Not used in this project           |
 
 ## ✔️ Final Model: Random Forest Classifier
 
