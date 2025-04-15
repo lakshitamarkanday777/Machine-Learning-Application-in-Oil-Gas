@@ -1,7 +1,5 @@
 # Machine-Learning-Application-in-Oil-Gas
 
-# Machine Learning Application in Oil & Gas
-
 This project applies machine learning to analyze and predict reservoir characteristics using a combination of geological, geophysical, and production data. The aim is to assist decision-making in the upstream oil and gas sector by building accurate regression models to estimate reservoir properties such as porosity and permeability.
 
 ## 📂 Project Overview
